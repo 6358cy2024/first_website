@@ -82,6 +82,7 @@ header nav a.active:after{
 
 figure {
     display:flex;
+    margin-bottom:35px;
 
 }
 
@@ -106,11 +107,32 @@ figure figcaption h3{
 
 main{
     display:grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
     /* justify-content: center; */
     flex:1; 
     flex-wrap: wrap;
+    
     /* This flex puts makes the  two sections take up more space*/
+}
+
+main article{
+    padding: 15px;
+    background-color:#444;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+main article.main-article{
+    grid-column: 1 / 4;
+    padding: 90px 25px;
+
+}
+
+main article .article-content{
+    padding: 10px;
+    background-color: rgba(250, 250, 250, 1);
+    border-radius: 5px;
 }
 
 .logo-link{
