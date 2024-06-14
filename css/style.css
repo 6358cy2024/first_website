@@ -1,6 +1,6 @@
 /* variable*/
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;0,900;1,400&display=swap');
 
 @import url(./variables.css);
 /* you can import another  css file into this one. This helps with organization if you're just defining things within this file and the actual cosmetics are out here.*/
@@ -27,6 +27,9 @@ a {
 }
 /*This makes the color of the links black*/
 /*Custom styles*/
+img {
+    max-width: 100%;
+}
 
 header {
     display: flex;
@@ -76,10 +79,37 @@ header nav a.active:after{
     opacity: .5;
 
 }
-main{
+
+figure {
     display:flex;
+
+}
+
+figure img{
+    width:45%;
+    flex:1;
+}
+
+figure figcaption{
+    flex:2;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+figure figcaption h3{
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+main{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    /* justify-content: center; */
     flex:1; 
+    flex-wrap: wrap;
     /* This flex puts makes the  two sections take up more space*/
 }
 
@@ -89,33 +119,6 @@ main{
 
 #logo{
     color: var(--primary-color);
-}
-
-section {
-    flex: 1;
-    background-color: #555;
-}
-
-section div:nth-child(even) {
-    background-color: #888;
-}
-section div:nth-child(odd) {
-    background-color: #aaa;
-}
-/* the divs are in alternating colors */
-
-section.right-section {
-    flex: 2;
-    background-color: #444;
-}
-section.right-section .section-header {
-    font-weight: 300;
-}
-
-.section-header {
-    color: var(--primary-color);
-    font-size: 30px; 
-    text-align: center;
 }
 
 /* .chat{
@@ -149,6 +152,17 @@ footer{
         margin: 4px 0;
     }
 }
+@media (min-width: 900px){
+    figure{
+        padding: 0 15%;
+    }
+    figcaption{
+        font-size: 2.5rem;
+    }
+    figcaption p {
+        font-size: 2rem;
+    }
+}
 
 @media (min-width: 1200px) {
     header{
@@ -158,5 +172,6 @@ footer{
         padding: 30px 20%;
     }
 }
+
 /* <!-- Cascading, so the last class will be applied if there are multiple classes in a single declaration.--> */
 
